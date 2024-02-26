@@ -1,1 +1,10 @@
 - In eventloop/timer.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+foo
+baz
+foo
+baz
+2 : bar
+1 : bar
+
+The operation in timeout function runs after the main thread is complete. The function goes to pending call backs, as the timeout is 0.
